@@ -3,7 +3,7 @@
 /**
  * _isupper -check 'for uppercase character'
  * @c: character to check
- * return: 1 if c is uppercase, o otherwise
+ * Return: 1 if c is uppercase, o otherwise
  */
 
 int _isupper(int c)
