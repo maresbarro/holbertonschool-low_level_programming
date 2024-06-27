@@ -6,14 +6,15 @@
  * @str: an input string
  * Return: Nothing
  */
+
 void _puts(char *str)
 {
-	int barro = 0;
+	int i = 0;
 
-	while (str[barro] != '\0')
+	while (str[i] != '\0')
 	{
-		_putchar(str[barro]);
-		barro++;
+		_putchar(str[i]);
+		i++;
 	}
 	_putchar('\n');
 }
