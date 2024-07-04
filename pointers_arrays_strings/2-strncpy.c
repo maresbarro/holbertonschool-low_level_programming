@@ -3,32 +3,28 @@
 #include <stdio.h>
 
 /**
- * *_strspn -print
- * @s: pointer
- * @accept: pointer
- * Return: longueur
+ * *_strncpy -print
+ * @dest: pointer
+ * @src: pointer
+ * @n: pointer src
+ * Return: dest
  */
-unsigned int _strspn(char *s, char *accept)
+
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i, x;
-	int longueur = 0;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (src[i] != '\0' && i < n)
 	{
-		for (x = 0; accept[x] != '\0'; x++)
-		{
-			if (s[i] == accept[x])
-			{
-				longueur++;
-				break;
-			}
-		}
-
-		if (accept[x] == '\0')
-		{
-			return (longueur);
-		}
+		dest[i] = src[i];
+		i++;
 	}
 
-	return (longueur);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+
+	return (dest);
 }
